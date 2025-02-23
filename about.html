@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+      rel="stylesheet"
+    /> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="footer.css"/>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      
+
+      .about-section {
+        padding: 40px 0;
+      }
+
+ 
+      .about-section p {
+        font-size: 1.5rem;
+        line-height: 1.9;
+        padding: 9px;
+      }
+      h5{
+font-family: 'Times New Roman', Times, serif;
+font-size: 1.5rem;
+       }
+
+      .about-content {
+        margin-bottom: 50px;
+        padding: 0.5rem;
+      }
+      .about-content ul li{
+        line-height: 2.5;
+        font-family: "Helvetica Neue",Helvetica,Arial
+      }
+
+      
+      .navbar-custom {
+        background: linear-gradient(45deg, #1a73e8, #34a853);
+        padding: 15px 20px;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .navbar-custom .nav-link {
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: #ffeb3b;
+      }
+
+      .navbar-custom .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      .navbar-custom .nav-link.active {
+        color: #ffeb3b;
+      }
+
+      .btn-cta {
+        background-color: #ffeb3b;
+        color: #333;
+        font-weight: 600;
+        margin-left: 20px;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-cta:hover {
+        background-color: #fcd303;
+        color: #333;
+      }
+      .footer {
+        background: linear-gradient(   #2b2c2c,#000000);
+        color: #eff1f4;
+        padding: 50px 0;
+      }
+
+      .footer a {
+        color: #eff1f4;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer a:hover {
+        color: #ff9800;
+      }
+
+      .footer-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ff9800;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #ff9800;
+      }
+
+      .quick-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .quick-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .quick-links ul li a {
+        text-decoration: none;
+      }
+
+      .contact-info p {
+        margin: 8px 0;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+      }
+
+      .footer-bottom {
+        background-color: linear-gradient(#181d1d, #a7a7a7);
+        padding: 15px 0;
+        text-align: center;
+        color : rgb(207, 207, 207);
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .social-icons {
+          margin-top: 15px;
+        }
+
+        .quick-links ul {
+          display: inline-block;
+        }
+      }
+      .qwer {
+        width: 75%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background: linear-gradient( rgba(94, 176, 209, 0.345) , rgba(0, 0, 0, 0.1)  );
+        box-shadow: 0 4px 8px rgba(41, 20, 179, 0.382);
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      </div>
+    </nav>
+       
+   <div class="qwer">
+    <!-- About Section -->
+    <div class="container about-section">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1> About Us</h1>
+          <p class="about-content">
+            नमस्कार! मैं आनंद दराडे, एक समर्पित पत्रकार हूं जो समाचार रिपोर्टिंग की दुनिया में समृद्ध अनुभव रखता हूं। छह वर्षों के अनुभव के साथ, मैं हर कहानी में ज्ञान और कहानी कहने का जुनून लाता हूं।
+         
+          <br>
+         
+             मैं मध्य प्रदेश के खूबसूरत शहर बिर खंडवा से आता हूं। यहां की मेरी जड़ें मेरे दृष्टिकोण को आकार देती हैं और महत्वपूर्ण कहानियों को उजागर करने के लिए मेरी प्रेरणा को बढ़ावा देती हैं।
+          </p>
+          <p class="about-content">
+            <h1>व्यावसायिक अनुभव:</h1><br>
+            <ul>
+              
+                <h3>पत्रिका:</h3> <h5>मेरी यात्रा पत्रिका से शुरू हुई, जहां मैंने चार साल बिताए और पत्रकारिता में मजबूत नींव विकसित की। यहां, मैंने खोजी रिपोर्टिंग की बारीकियों और गहन शोध के महत्व को समझा।</h5> 
+               <br>
+               
+                <h3>नईदुनिया:</h3> <h5>पत्रिका में अपने कार्यकाल के बाद, मैंने नईदुनिया में शामिल होकर अपने कौशल को और निखारा और अपने पत्रकारिता के क्षितिज को विस्तारित किया।</h5> 
+             
+              <br>
+            
+                <h3>एसीएन भारत न्यूज़ चैनल:</h3><h5> वर्तमान में, मैं एसीएन भारत टीम का हिस्सा होने पर गर्व महसूस करता हूं, जहां मैं हमारे दर्शकों तक समय पर और प्रभावशाली समाचार पहुंचाता हूं। यहां मेरी भूमिका मुझे वर्तमान घटनाओं से जुड़ने और महत्वपूर्ण मुद्दों को उजागर करने की अनुमति देती है।</h5>
+            
+              <br>
+              
+                <h3>स्वदेश समाचार पत्र:</h3><h5> एसीएन भारत में मेरी भूमिका के साथ-साथ, मैं स्वदेश समाचार पत्र में भी योगदान देता हूं, जिससे हमारे पाठकों को अच्छी तरह से लिखे गए और अंतर्दृष्टिपूर्ण लेख प्राप्त होते रहें।</h5>
+              
+              <br>
+            </ul>
+          </p>
+          <p class="about-content">
+           [ एक पत्रकार के रूप में मेरा दृष्टिकोण है कि बिना आवाज़ वालों को आवाज़ देना और महत्वपूर्ण कहानियों पर प्रकाश डालना। मैं अपनी सभी रिपोर्टिंग में सटीकता, अखंडता और निष्पक्षता के उच्चतम मानकों को बनाए रखने का प्रयास करता हूं। अपने काम के माध्यम से, मेरा उद्देश्य समाज में जानकारी देना, शिक्षित करना और परिवर्तन को प्रेरित करना है।<br />
+            मेरी यात्रा के बारे में जानने के लिए धन्यवाद। मैं आपको अपने पोर्टफोलियो का पता लगाने और सच्चाई और प्रभावशाली कहानी कहने की अपनी खोज में शामिल होने के लिए आमंत्रित करता हूं। ]
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thank You Image -->
+  </div>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center text-md-left">
+            <div class="footer-logo"> <h3>A.Darade</h3></div>
+            <p>Welcome to the world of news.</p>
+            <div class="social-icons mt-3">
+              <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-left quick-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center text-md-left contact-info">
+            <h5>Contact Info</h5>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:raginee@gmail.com" class="text-light"
+                >raginee@gmail.com</a
+              >
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919584531151" class="text-light">+91 9584531151</a>
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919826497484" class="text-light">+91 9826497484</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        &copy; 2024 blog_A.Darade | Designed by Raginee Darade
+      </div>
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

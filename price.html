@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing for Ads</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar-custom {
+        background: linear-gradient(45deg, #1a73e8, #34a853);
+        padding: 15px 20px;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .navbar-custom .nav-link {
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: #ffeb3b;
+      }
+
+      .navbar-custom .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      .navbar-custom .nav-link.active {
+        color: #ffeb3b;
+      }
+
+      .btn-cta {
+        background-color: #ffeb3b;
+        color: #333;
+        font-weight: 600;
+        margin-left: 20px;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-cta:hover {
+        background-color: #fcd303;
+        color: #333;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 20px;
+      }
+      .header-text {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .header-text h1 {
+        font-size: 36px;
+        color: #333;
+      }
+      .header-text p {
+        font-size: 18px;
+        color: #666;
+      }
+      .section-box {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 50px;
+      }
+      .pricing-table,
+      .ad-sections,
+      .paper-ad-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px);
+      }
+      .card h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      .card p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .card .price {
+        font-size: 36px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-bottom: 20px;
+      }
+      .card .price span {
+        font-size: 20px;
+        color: #333;
+      }
+      .cta-button {
+        padding: 12px 30px;
+        background-color: #333;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: rgba(34, 72, 179, 0.61);
+        transform: scale(1.05);
+      }
+      .testimonials {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .testimonials h2 {
+        font-size: 28px;
+        color: #333;
+      }
+      .testimonials p {
+        font-size: 18px;
+        color: #666;
+      }
+      .footer {
+        background: linear-gradient(#2b2c2c, #000000);
+        color: #eff1f4;
+        padding: 50px 0;
+      }
+
+      .footer a {
+        color: #eff1f4;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer a:hover {
+        color: #ff9800;
+      }
+
+      .footer-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ff9800;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #ff9800;
+      }
+
+      .quick-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .quick-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .quick-links ul li a {
+        text-decoration: none;
+      }
+
+      .contact-info p {
+        margin: 8px 0;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+      }
+
+      .footer-bottom {
+        padding: 15px 0;
+        text-align: center;
+        color: rgb(207, 207, 207);
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .social-icons {
+          margin-top: 15px;
+        }
+
+        .quick-links ul {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">The Anand Darade</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="price.html">Addvertisment</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-cta" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br /><br />
+    <div class="container">
+      <div class="header-text">
+        <h1>📊 Advertisement Pricing</h1>
+        <p>Discover our pricing for paper and channel advertisements.</p>
+      </div>
+      <div class="section-box">
+        <div class="header-text">
+          <h1>📰 Paper Advertisement Pricing</h1>
+          <p>
+            Advertise your business in our newspaper with different ad sizes.
+            See below for pricing.
+          </p>
+        </div>
+        <div class="paper-ad-sections">
+          <div class="card">
+            <h3>Full Page Ad</h3>
+            <img src="images/p1.jpeg" alt="Video Ad" />
+            <div class="price">$5000 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Half Page Ad</h3>
+            <img src="images/p2.jpg" alt="Video Ad" />
+            <div class="price">$3000 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Quarter Page Ad</h3>
+            <img src="images/p3.jpg" alt="Video Ad" />
+            <div class="price">$1500 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Eighth Page Ad</h3>
+            <img src="images/p4.jpeg" alt="Video Ad" />
+            <div class="price">$800 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>book Printing Ad</h3>
+            <img src="images/l1.avif" alt="Video Ad" />
+            <div class="price">$1500 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Templates Ad</h3>
+            <img src="images/ass.jpg" alt="Video Ad" />
+            <div class="price">$1500 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-box">
+        <div class="header-text">
+          <h1>📺 Channel Advertisement Pricing</h1>
+          <p>
+            Advertise your business on TV with different formats: Text Ads,
+            Image Ads, and Video Ads. Explore the pricing below!
+          </p>
+        </div>
+        <div class="ad-sections">
+          <div class="card">
+            <h3>Text Advertisement</h3>
+            <img src="images/hed.jpg" alt="Image Ad" />
+            <p>
+              Reach your audience with impactful text ads. Perfect for quick
+              announcements or promotions!
+            </p>
+            <div class="price">$1000 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Image Advertisement</h3>
+            <img src="images/OIP.jpeg" alt="Image Ad" />
+            <p>
+              Advertise visually with stunning images. Ideal for brand
+              visibility and promotions.
+            </p>
+            <div class="price">$2500 <span>/ per ad</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+          <div class="card">
+            <h3>Video Advertisement</h3>
+            <img src="images/vid.jpeg" alt="Video Ad" />
+            <p>
+              Engage your audience with dynamic video content. A great way to
+              tell your brand's story!
+            </p>
+            <div class="price">$5000 <span>/ per video</span></div>
+            <a href="contact.html" class="cta-button">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </body>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 text-center text-md-left">
+              <div class="footer-logo">A.Darade</div>
+              <p>Welcome to the world of news.</p>
+              <div class="social-icons mt-3">
+                <a href="#" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="col-md-4 quick-links">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 contact-info">
+              <h5>Contact Info</h5>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:raginee@gmail.com">raginee@gmail.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919584531151">+91 9584531151</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919826497484">+91 9826497484</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          &copy; 2024 blog_A.Darade | Designed by Raginee Darade
+        </div>
+      </footer>
+    </div>
+  
+</html>

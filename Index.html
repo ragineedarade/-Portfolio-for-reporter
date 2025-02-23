@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing for Ads</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar-custom {
+        background: linear-gradient(45deg, #1a73e8, #34a853);
+        padding: 15px 20px;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .navbar-custom .nav-link {
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: #ffeb3b;
+      }
+
+      .navbar-custom .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      .navbar-custom .nav-link.active {
+        color: #ffeb3b;
+      }
+
+      .btn-cta {
+        background-color: #ffeb3b;
+        color: #333;
+        font-weight: 600;
+        margin-left: 20px;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-cta:hover {
+        background-color: #fcd303;
+        color: #333;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+      .banner {
+        width: 100%;
+        height: 400px; /* Adjust the height as needed */
+        background-image: url("images/acn.jpg"); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .big-ad-section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .big-ad-section h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+        text-transform: uppercase;
+      }
+      .ad-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .ad-section {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .independence-day {
+        background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+        color: #000;
+      }
+      .republic-day {
+        background: linear-gradient(135deg, #138808, #ffffff, #ff9933);
+        color: #000;
+      }
+      .special-day {
+        background: linear-gradient(135deg, #1e90ff, #ffd700);
+        color: #fff;
+      }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .cta-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .cta-button:hover {
+        background-color: #333;
+      }
+      @media (max-width: 900px) {
+        .ad-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .coverage-section {
+        max-width: 900px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(9, 3, 3, 0.1);
+        text-align: center;
+      }
+      h1 {
+        color: rgba(20, 17, 241, 0.75);
+        margin-bottom: 15px;
+      }
+      p {
+        color: #555;
+        font-size: 16px;
+      }
+      .coverage-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+      .coverage-list li {
+        background: rgb(84, 151, 218);
+        color: rgb(254, 250, 250);
+        padding: 12px 20px;
+        margin: 8px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      .coverage-list li:hover {
+        background:rgba(156, 5, 141, 0.93);
+      }
+      .footer {
+        background: linear-gradient(   #2b2c2c,#000000);
+        color: #eff1f4;
+        padding: 50px 0;
+      }
+
+      .footer a {
+        color: #eff1f4;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer a:hover {
+        color: #ff9800;
+      }
+
+      .footer-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ff9800;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #ff9800;
+      }
+
+      .quick-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .quick-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .quick-links ul li a {
+        text-decoration: none;
+      }
+
+      .contact-info p {
+        margin: 8px 0;
+      }
+
+      .contact-info i {
+        margin-right: 8px;
+      }
+
+      .footer-bottom {
+        
+        padding: 15px 0;
+        text-align: center;
+        color : rgb(207, 207, 207);
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .social-icons {
+          margin-top: 15px;
+        }
+
+        .quick-links ul {
+          display: inline-block;
+        }
+      }
+      .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        animation: marquee 20s linear infinite;
+         font-weight: 800;
+        
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">The Anand Darade</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="price.html">Addvertisment</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-cta" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- this is a  banner image  -->
+    <div class="banner"></div>
+    <br /><br />
+    <!-- th is  spepecial add -->
+    <div class="big-ad-section">
+      <h1>📢 Special Advertisements</h1>
+      <div class="ad-container">
+        <!-- Independence Day Ad -->
+        <div class="ad-section independence-day">
+          <h2>🇮🇳 Happy Independence Day! 🇮🇳</h2>
+          <p>Let's celebrate the spirit of freedom and honor our heroes.</p>
+          <p>Wishing you a day filled with pride and patriotism! 🎉</p>
+          <a href="price.html" class="cta-button">Book Add</a>
+        </div>
+
+        <!-- Republic Day Ad -->
+        <div class="ad-section republic-day">
+          <h2>🎊 Happy Republic Day! 🎊</h2>
+          <p>
+            Let’s uphold justice, liberty, and equality as we celebrate
+            democracy.
+          </p>
+          <p>Jai Hind! 🇮🇳</p>
+          <a href="price.html" class="cta-button">Book Add</a>
+        </div>
+
+        <!-- Random Special Day Ad -->
+        <div class="ad-section special-day">
+          <h2>🌟 Special Day Offer! 🌟</h2>
+          <p>Stay tuned for exclusive reports and exciting updates.</p>
+          <p>Bringing you the latest news & insights every day!</p>
+          <a href="price.html" class="cta-button">Book Add</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 30px">
+        <a
+          href="tel:+919826497484"
+          class="cta-button"
+          style="background-color: black; font-size: 18px; padding: 12px 24px"
+        >
+          <i class="fas fa-phone-alt" style="margin-right: 8px"></i>
+          <!-- Call Icon -->
+          Call for Advertisement
+        </a>
+      </div>
+    </div>
+    <section class="coverage-section">
+        <h1 style="color: black;">News Coverage Area</h1>
+        <p>
+          <p style="color: black;">I work and Like to Public news In this Area:</p>
+        </p>
+        <ul class="coverage-list">
+          <li>Local Politics</li>
+          <li>Crime and Investigations</li>
+          <li>Social Issues</li>
+          <li>Education & Institutions</li>
+          <li>Health & Medical News</li>
+          <li>Business & Economy</li>
+          <li>Sports & Entertainment</li>
+          <li>Special Reports & Interviews</li>
+        </ul>
+      </section> 
+      
+      <div class="bg-info text-white p-3">
+        <div class="marquee">
+          Email:
+          <a href="mailto:raginee@gmail.com" class="text-white"
+            >raginee@gmail.com</a
+          >
+          || Phone: <a href="tel:+919584531151" class="text-white">9584531151</a>,
+          <a href="tel:+919826497484" class="text-white">9826497484</a> ||
+          Facebook:
+          <a href="https://www.facebook.com" class="text-white" target="_blank"
+            >Facebook</a
+          >
+          || YouTube:
+          <a href="https://www.youtube.com" class="text-white" target="_blank"
+            >YouTube</a
+          >
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 text-center text-md-left">
+              <div class="footer-logo">A.Darade</div>
+              <p>Welcome to the world of news.</p>
+              <div class="social-icons mt-3">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-md-4 quick-links">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-md-4 contact-info">
+              <h5>Contact Info</h5>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:raginee@gmail.com">raginee@gmail.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919584531151">+91 9584531151</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919826497484">+91 9826497484</a>
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-bottom">
+          &copy; 2024 blog_A.Darade | Designed by Raginee Darade
+        </div>
+      </footer>
+  </body>
+</html>
