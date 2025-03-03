@@ -47,14 +47,4 @@ Simply open `index.html` in your preferred browser.
 python manage.py runserver  # For Django projects
 ```
 
-## 🔗 Live Demo
-[Click here to view the live site](https://your-deployed-link.com)
-
-## 🤝 Contributing
-If you'd like to contribute, feel free to fork the repository and submit a pull request.
-
-## 📧 Contact
-For any queries, you can reach out at [your-email@example.com](mailto:your-email@example.com).
-
----
-⭐ Don't forget to star the repository if you find it useful!
+ 
