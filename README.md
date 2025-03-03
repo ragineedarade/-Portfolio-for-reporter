@@ -1,4 +1,4 @@
- # Father's Portfolio
+ # Portfolio For News Or Channel Repoter
 
 ## 🖥️ Project Overview
 This is a professional portfolio website designed to showcase my father's skills, experience, and accomplishments. The portfolio includes sections for his biography, work experience, projects, achievements, and contact details.
